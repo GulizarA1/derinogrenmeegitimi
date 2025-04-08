@@ -1,2 +1,2 @@
-# Derin Öğrenme EĞitimi
+# Derin Öğrenme Eğitimi
 Derin Öğrenme Modellerini Eğitme 
