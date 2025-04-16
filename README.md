@@ -1,2 +1,3 @@
 # Derin Öğrenme Eğitimi
 Derin Öğrenme Modellerini Eğitme 
+Nvidia ekran kartına sahip öğrenciler, CUDA ve cuDNN kurulumlarını gerçekleştirerek kişisel bilgisayarlarında derin öğrenme modelleri eğiteceklerdir. Mac veya farklı marka bilgisayar kullanan öğrenciler ise, kendi grafik kartlarını kullanarak model eğitimi yapmayı öğrenecek ve bu süreci kendi cihazlarında uygulayacaklardır. Eğitim sürecinde YOLO modeli kullanılmayacak, bunun yerine evrişimli sinir ağı (CNN) katmanları elle oluşturularak temel bir model geliştirilecektir. Model, sekiz farklı sınıfı ayırt edebilecek şekilde tasarlanacak ve bazı sınıflar birbirine benzer özellikler taşıyacaktır. Kullanılacak görsellerde, bazı fotoğraflarda içerisinde birden fazla nesne bulunmasına dikkat edilecektir.
