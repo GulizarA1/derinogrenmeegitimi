@@ -47,5 +47,54 @@ train_transform = transforms.Compose([
 
 
 ***
+
+        for epoch in range(5, 15):  # Daha fazla epoch ekleyerek eğitimi sürdür
+    ...
+***
+
+    train_transform = transforms.Compose([
+    transforms.RandomHorizontalFlip(),
+    transforms.RandomRotation(15),
+    transforms.RandomResizedCrop(64),
+    transforms.ColorJitter(brightness=0.2, contrast=0.2),
+    transforms.ToTensor(),
+    transforms.Normalize((0.5,), (0.5,))
+])
+
+
+***
+
+        from sklearn.metrics import confusion_matrix
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Gerçek etiketler ve model tahminlerini alın
+# Replace ... with the actual true labels from your test data
+y_true = [label for _, label in test_data]
+
+# Replace ... with the predicted labels from your model's evaluation on the test data
+y_pred = []
+model.eval()
+with torch.no_grad():
+    for images, labels in test_loader:
+        images = images.to(device)
+        outputs = model(images)
+        _, predicted = torch.max(outputs, 1)
+        y_pred.extend(predicted.cpu().numpy())
+
+
+cm = confusion_matrix(y_true, y_pred)
+
+# Karışıklık matrisini görselleştirme
+plt.figure(figsize=(10,7))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues') # Remove xticklabels and yticklabels if class_names is not defined
+plt.xlabel('Tahmin Edilen')
+plt.ylabel('Gerçek')
+plt.title('Karışıklık Matrisi')
+plt.show()
+
+
+***
+
           
       
