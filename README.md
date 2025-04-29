@@ -149,6 +149,10 @@ weighted avg       0.55      0.36      0.32       200
 
 
 
+https://www.youtube.com/watch?v=AYiR7loRzRY
+
+
+
 
 
 
